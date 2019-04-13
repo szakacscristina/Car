@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="UI.ShowClientsByDiscountController">
+    <HBox alignment="CENTER">
+        <Label text="Clients ordered by discounts">
+            <font>
+                <Font name="System Bold" size="16.0"/>
+            </font>
+        </Label>
+    </HBox>
+    <HBox alignment="TOP_CENTER">
+        <TableView fx:id="tableViewOrderedClients" editable="true" prefHeight="400.0" prefWidth="694.0">
+            <columns>
+                <TableColumn fx:id="tableColumnIdClient" text="ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnFirstNameClient" text="Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnLastNameClient" text="Surname">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="surname"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnCnpClient" prefWidth="114.0" text="CNP">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="CNP"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnDateOfBirthClient" prefWidth="118.0" text="Date of birth">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="dateOfBirth"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnDateOfRegistrationClient" prefWidth="121.0" text="Date of registration">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="registrationDate"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnDiscountClient" prefWidth="98.0" text="Discount">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="discount"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </HBox>
+</VBox>

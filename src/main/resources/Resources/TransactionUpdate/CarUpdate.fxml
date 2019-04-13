@@ -1,0 +1,31 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Spinner?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.Label?>
+<VBox alignment="center" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="UI.CarController">
+    <HBox alignment="TOP_CENTER">
+        <Label text="Movie ID"/>
+        <Spinner fx:id="spnId" editable="true" initialValue="0" max="2000000000" min="0"/>
+    </HBox>
+    <Pane prefHeight="5.0" prefWidth="330.0"/>
+    <HBox alignment="TOP_CENTER">
+        <TextField fx:id="txtCarModel" prefHeight="25.0" prefWidth="110.0" promptText="Name"/>
+        <TextField fx:id="txtCarBoughtYear" prefHeight="25.0" prefWidth="110.0" promptText="Year"/>
+        <TextField fx:id="txtCarKilometers" prefHeight="25.0" prefWidth="110.0" promptText="kilo"/>
+        <TextField fx:id="txtCarYearOfFabrication" prefHeight="25.0" prefWidth="110.0" promptText="yearf"/>
+    </HBox>
+    <Pane prefHeight="5.0" prefWidth="330.0"/>
+    <CheckBox fx:id="chkInWarranty" text="In Warranty"/>
+    <Pane prefHeight="5.0" prefWidth="330.0"/>
+    <HBox alignment="TOP_CENTER">
+        <Button text="Add" fx:id="btnAdd" onAction="#btnAddClick"/>
+        <Button text="Cancel" fx:id="btnCancel" onAction="#btnCancelClick"/>
+    </HBox>
+</VBox>
